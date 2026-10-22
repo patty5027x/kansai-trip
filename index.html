@@ -104,6 +104,7 @@ nav svg{display:block;margin:auto;width:26px;height:26px}
 #f label{display:block;font-size:13px;margin:10px 0 3px}#f .row{margin-top:16px;margin-bottom:0}
 .note{font-size:12px;text-align:center;opacity:.7}
 input[type=file]{display:none!important}
+.lk{font:inherit;font-size:13px;color:var(--ink);background:var(--bg);border:2.5px solid var(--ink);border-radius:14px;padding:2px 10px;white-space:nowrap}
 .wq.tq{cursor:pointer}.wq.tq .nv{pointer-events:none}.wq i{display:block}
 #vw .vb .bt{padding:5px 12px}
 #vw{position:fixed;inset:0;z-index:40;background:#fff;display:none;flex-direction:column}
@@ -393,14 +394,21 @@ var CITY={osaka:['大阪',34.69,135.5],kobe:['神戶',34.69,135.19],kyoto:['京�
 function cityToday(){var n=new Date(Date.now()+9*3600e3),i=dIdx((n.getUTCMonth()+1)+'/'+n.getUTCDate());return i==2?'kobe':(i>=3&&i<=5)?'kyoto':'osaka'}
 function wcat(c,day){var k=c<=1?'sun':c<=48?'cloud':((c>=71&&c<=77)||c==85||c==86)?'snow':'rain';if(!day&&(k=='sun'||k=='cloud'))k='night';return k}
 function wDesc(c){return c==0?'晴':c<=2?'晴時多雲':c==3?'陰':c<=48?'有霧':c<=57?'毛毛雨':c<=67?'下雨':c<=77?'下雪':c<=82?'陣雨':c<=86?'陣雪':'雷雨'}
-function getWx(){var k=cityToday(),c=CITY[k];try{var ca=JSON.parse(localStorage.getItem('kxw')||'null');if(ca&&ca.k==k&&Date.now()-ca.t<1800e3){WX=ca;return Promise.resolve()}}catch(e){}
-return fetch('https://api.open-meteo.com/v1/forecast?latitude='+c[1]+'&longitude='+c[2]+'&current=temperature_2m,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=1').then(function(r){return r.json()}).then(function(d){WX={k:k,t:Date.now(),cur:d.current,day:{c:d.daily.weather_code[0],hi:d.daily.temperature_2m_max[0],lo:d.daily.temperature_2m_min[0],pp:d.daily.precipitation_probability_max[0]}};try{localStorage.setItem('kxw',JSON.stringify(WX))}catch(e){}}).catch(function(){if(!WX)WX={err:1}})}
+var GERR='';
+function getPos(){return new Promise(function(res){if(!navigator.geolocation)return res(null);navigator.geolocation.getCurrentPosition(function(p){res([p.coords.latitude,p.coords.longitude])},function(e){res(e&&e.code==1?'deny':null)},{maximumAge:1800e3,timeout:10000})})}
+async function getWx(){var loc=null,k,nm;GERR='';
+if(S.geo){var p=await getPos();if(p==='deny'){S.geo=0;save(1);GERR='沒有定位權限，先顯示行程城市的天氣'}else if(p)loc=p;else GERR='暫時抓不到位置，先顯示行程城市的天氣'}
+if(loc)k='g'+loc[0].toFixed(2)+','+loc[1].toFixed(2);else{k=cityToday();loc=[CITY[k][1],CITY[k][2]];nm=CITY[k][0]}
+try{var ca=JSON.parse(localStorage.getItem('kxw')||'null');if(ca&&ca.k==k&&Date.now()-ca.t<1800e3&&ca.cur){WX=ca;return}}catch(e){}
+try{var r=await fetch('https://api.open-meteo.com/v1/forecast?latitude='+loc[0]+'&longitude='+loc[1]+'&current=temperature_2m,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=1'),d=await r.json();
+if(!nm){nm='目前位置';try{var g=await (await fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+loc[0]+'&longitude='+loc[1]+'&localityLanguage=zh-Hant')).json();nm=g.city||g.locality||g.principalSubdivision||nm}catch(e){}}
+WX={k:k,nm:nm,geo:k.charAt(0)=='g',t:Date.now(),cur:d.current,day:{c:d.daily.weather_code[0],hi:d.daily.temperature_2m_max[0],lo:d.daily.temperature_2m_min[0],pp:d.daily.precipitation_probability_max[0]}};try{localStorage.setItem('kxw',JSON.stringify(WX))}catch(e){}}catch(e){if(!WX||!WX.cur)WX={err:1}}}
 function wMode(){if(WP>=0)return WK[WP];if(!WX||WX.err||!WX.cur)return'sun';return wcat(WX.cur.weather_code,WX.cur.is_day)}
-function fillWx(){var h=$('.hero');if(h){WK.forEach(function(k){h.classList.remove('w-'+k)});h.classList.add('w-'+wMode())}var e=$('#wx');if(!e)return;var m=wMode();
+function fillWx(){var h=$('.hero');if(h){WK.forEach(function(k){h.classList.remove('w-'+k)});h.classList.add('w-'+wMode())}var e=$('#wx');if(!e)return;var m=wMode(),sw='<div class="row" style="margin:8px 0 0;justify-content:space-between"><span class="sm">'+(GERR||(S.geo?'📍 使用目前位置':'依行程城市'))+'</span><button class="lk" id="'+(S.geo?'geo0':'geo1')+'">'+(S.geo?'改用行程城市':'📍 改用目前位置')+'</button></div>';
 if(WP>=0){e.innerHTML='<div class="row" style="margin:0"><span style="font-size:30px">'+WI[m]+'</span><div style="flex:1"><div>預覽：'+WN[m]+'</div><div class="sm">再點一下換下一種，看完會回到實際天氣</div></div></div>';return}
-if(!WX)e.innerHTML='<div class="sm">天氣讀取中…</div>';else if(WX.err)e.innerHTML='<div class="sm">暫時讀不到天氣，連上網路後會自動更新</div>';
-else e.innerHTML='<div class="row" style="margin:0"><span style="font-size:30px">'+WI[m]+'</span><div style="flex:1"><div>'+CITY[WX.k][0]+'今天・'+wDesc(WX.day.c)+'</div><div class="sm">現在 '+Math.round(WX.cur.temperature_2m)+'°・'+Math.round(WX.day.lo)+'° ~ '+Math.round(WX.day.hi)+'°・降雨機率 '+(WX.day.pp==null?0:WX.day.pp)+'%</div></div></div>'}
-V.addEventListener('click',function(e){if(S.tab=='home'&&e.target.closest('#wx')){WP=WP+1;if(WP>=WK.length)WP=-1;fillWx()}});
+if(!WX)e.innerHTML='<div class="sm">天氣讀取中…</div>'+sw;else if(WX.err)e.innerHTML='<div class="sm">暫時讀不到天氣，連上網路後會自動更新</div>'+sw;
+else e.innerHTML='<div class="row" style="margin:0"><span style="font-size:30px">'+WI[m]+'</span><div style="flex:1"><div>'+esc(WX.nm||(CITY[WX.k]?CITY[WX.k][0]:'目前位置'))+'今天・'+wDesc(WX.day.c)+'</div><div class="sm">現在 '+Math.round(WX.cur.temperature_2m)+'°・'+Math.round(WX.day.lo)+'° ~ '+Math.round(WX.day.hi)+'°・降雨機率 '+(WX.day.pp==null?0:WX.day.pp)+'%</div></div></div>'+sw}
+V.addEventListener('click',function(e){if(S.tab!='home')return;var g=e.target.closest('.lk');if(g){S.geo=g.id=='geo1'?1:0;save(1);WX=null;WP=-1;fillWx();getWx().then(fillWx);return}if(e.target.closest('#wx')){WP=WP+1;if(WP>=WK.length)WP=-1;fillWx()}});
 
 V.addEventListener('click',function(e){if(S.tab!='home'||!catFeed)return;var g=e.target.closest('.hero svg');if(!g)return;var pt=g.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;var q=pt.matrixTransform(g.getScreenCTM().inverse());catFeed(q.x,q.y)});
 render();
