@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>京阪神之旅</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<meta name="theme-color" content="#FFFCF6">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="京阪神之旅">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3E3A39;--bg:#FFFCF6;--co:#F2A497;--ye:#F6D27A;--aq:#A8D3E6;--gr:#B9DAA5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Huninn,"PingFang TC","Noto Sans TC",sans-serif;padding-bottom:92px;-webkit-tap-highlight-color:transparent}
+main{max-width:560px;margin:auto;padding:14px}
+h1{font-size:26px;margin:10px 0 2px;display:flex;align-items:center;gap:6px}h2{font-size:20px;margin:18px 0 8px}
+.bx{border:3px solid var(--ink);border-radius:24px;background:var(--bg);padding:12px;margin-bottom:14px}
+.hero{border:3px solid var(--ink);border-radius:28px;overflow:hidden;background:var(--aq);line-height:0;margin-top:10px}
+.hero svg{width:100%;height:auto}
+.cl{animation:dr 11s ease-in-out infinite alternate}.cl2{animation-duration:15s}
+.sun{transform-box:fill-box;transform-origin:center;animation:pl 3s ease-in-out infinite}
+.trn,.pp{animation:bob 2.2s ease-in-out infinite}.pp2{animation-delay:-.7s}
+.tail{transform-origin:192px 170px;animation:wag 1.4s ease-in-out infinite alternate}
+.th svg .fx{transform-box:fill-box;transform-origin:center;animation:pl 2.4s ease-in-out infinite}
+.cf{transform-box:fill-box;transform-origin:center;transition:transform .15s}.cat.run .cb{animation:hop .16s ease-in-out infinite alternate}
+@keyframes hop{to{transform:translateY(-3px)}}
+@keyframes dr{to{transform:translateX(26px)}}@keyframes pl{50%{transform:scale(1.1)}}@keyframes bob{50%{transform:translateY(-3px)}}@keyframes wag{to{transform:rotate(16deg)}}
+.cd{background:var(--ye);text-align:center}.cd b{font-size:44px;line-height:1.15;display:block}.cd .r{font-size:22px}
+.row{display:flex;gap:8px;margin-bottom:8px;align-items:center}
+.fl2{padding:6px 0}.fl2+.fl2{border-top:3px dashed var(--ink)}.fl2 b{font-size:22px}
+.sm{font-size:13px;opacity:.75}
+.sh{display:flex;align-items:center;gap:10px;font-size:24px;margin:8px 0 12px}
+.si{width:48px;height:48px;border:3px solid var(--ink);border-radius:50%;background:var(--co);display:flex;align-items:center;justify-content:center;flex:none}
+.si.y{background:var(--ye)}
+.ds{position:relative;display:flex;margin:0 -6px 6px}
+.ln{position:absolute;top:7px;border-top:3px solid var(--ink)}
+.dn{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;font:inherit;color:var(--ink);background:none;border:0;padding:0}
+.dot{width:17px;height:17px;border:3px solid var(--ink);border-radius:50%;background:var(--bg);position:relative;z-index:1}
+.dn b{margin-top:46px;font-size:14px;font-weight:400;padding:1px 6px;border-radius:12px;white-space:nowrap}
+.dn small{font-size:11px;opacity:.7}
+.dn.on b{background:var(--co)}.dn.ov b{background:var(--gr)}.dn.ov .dot{background:var(--gr)}
+.mk{position:absolute;top:13px;width:56px;margin-left:-28px;transition:left .55s cubic-bezier(.3,1.55,.5,1);pointer-events:none}
+.mk svg{display:block}
+.dc{display:flex;gap:12px;align-items:center;border:3px solid var(--ink);border-radius:24px;padding:12px;margin:4px 0 18px;position:relative;cursor:pointer}
+.th{width:84px;height:64px;flex:none;border:3px solid var(--ink);border-radius:14px;overflow:hidden;background:var(--bg);line-height:0}
+.th svg{width:100%;height:100%}
+.dx{flex:1;min-width:0;padding-right:26px}.dt2{font-size:19px;line-height:1.3}
+.dc .pe{position:absolute;right:10px;top:10px;opacity:.55}
+.bn{animation:pop .45s cubic-bezier(.3,1.7,.5,1)}
+@keyframes pop{0%{transform:scale(.8) translateY(10px);opacity:0}100%{transform:none;opacity:1}}
+ul{list-style:none;margin:0;padding:0;position:relative;min-height:50px}
+ul::before{content:"";position:absolute;left:58px;top:12px;bottom:12px;border-left:3px dotted var(--ink)}
+.it{display:grid;grid-template-columns:47px 24px 1fr;align-items:start;margin-bottom:12px;position:relative;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.it.an{animation:pop .45s cubic-bezier(.3,1.7,.5,1) both}
+.tt{font-size:14px;text-align:right;padding:15px 2px 0 0;white-space:nowrap}
+.nd{display:flex;justify-content:center;padding-top:16px;position:relative;z-index:1}
+.nd i{width:17px;height:17px;border:3px solid var(--ink);border-radius:50%;background:var(--bg)}
+.cn{display:flex;gap:8px;align-items:flex-start;border:3px solid var(--ink);border-radius:20px;padding:10px 6px 10px 12px;background:var(--bg)}
+.tr .cn{border-color:transparent;padding:8px 8px 8px 6px;background:none}
+.tr .tt{padding-top:13px}.tr .nd{padding-top:14px}
+.tx{flex:1;min-width:0;padding-top:2px}
+.pt{font-size:17px;line-height:1.4;text-decoration:underline;text-decoration-color:var(--aq);text-decoration-thickness:4px;text-underline-offset:5px;text-decoration-skip-ink:none}
+.tq{font-size:15px;line-height:1.6}
+.n{font-size:13px;opacity:.7;margin-top:2px}
+.tag{display:inline-flex;align-items:center;gap:3px;border:2.5px solid var(--ink);border-radius:14px;padding:0 9px 0 6px;font-size:13px;margin-right:6px;vertical-align:1px;line-height:1.5}
+.tag svg{width:14px;height:14px}
+.tag.c{background:var(--co)}.tag.y{background:var(--ye)}.tag.a{background:var(--aq)}.tag.g{background:var(--gr)}
+.ic{display:flex;gap:3px;flex:none;margin-right:-2px}
+.ib{width:29px;height:29px;flex:none;display:flex;align-items:center;justify-content:center;font:inherit;font-size:11px;color:var(--ink);background:var(--gr);border:2.5px solid var(--ink);border-radius:50%;padding:0;text-decoration:none}
+.ib svg{width:16px;height:16px}.ib.e{background:var(--ye)}.ib.x{background:var(--co)}.ib.big{width:46px;height:46px}.ib.big svg{width:22px;height:22px}
+.ghost{opacity:.25}
+.fl{position:fixed!important;z-index:20;pointer-events:none;margin:0!important;transform:rotate(-2deg);animation:none!important}
+.fl .cn{background:var(--ye);border-color:var(--ink);box-shadow:0 5px 0 var(--ink)}
+.wq.fl{box-shadow:0 5px 0 var(--ink);transform:rotate(-4deg)}
+.ph{height:14px;margin:0 0 12px 72px;border-radius:7px;background:var(--co);border:3px solid var(--ink)}
+.bt{font:inherit;font-size:15px;color:var(--ink);background:var(--gr);border:3px solid var(--ink);border-radius:18px;padding:5px 16px}
+.bt.d{background:var(--co)}.bt.w{background:var(--bg)}
+.add{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--ye);border:3px solid var(--ink);border-radius:20px;padding:10px;margin-top:4px}
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wq{position:relative;min-height:58px;border:3px solid var(--ink);border-radius:16px;padding:6px 42px 6px 12px;font-size:17px;line-height:1.25;display:flex;flex-direction:column;justify-content:center;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.wq span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.wq i{font-style:normal;font-size:11px;opacity:.75}
+.wq .nv{position:absolute;right:7px;top:50%;margin-top:-15px;width:30px;height:30px;border:2.5px solid var(--ink);border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center}
+.wq.add2{background:var(--bg);border-style:dashed;align-items:center;padding:6px;font-size:26px}
+input,select{font:inherit;color:var(--ink);background:var(--bg);border:3px solid var(--ink);border-radius:14px;padding:0 12px;width:100%;min-width:0;max-width:100%;height:46px;display:block;-webkit-appearance:none;appearance:none;text-align:left}
+.ck{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:3px dashed var(--ink)}
+.ck input{width:26px;height:26px;accent-color:var(--co);-webkit-appearance:auto;appearance:auto}
+.ck.dn2 span{text-decoration:line-through;opacity:.5}.ck span{flex:1}
+.sum{background:var(--gr);text-align:center;font-size:20px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;gap:6px;background:var(--bg);border-top:3px solid var(--ink);padding:6px 8px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px));z-index:10}
+nav button{flex:1;font:inherit;font-size:12px;color:var(--ink);background:none;border:3px solid transparent;border-radius:18px;padding:4px 0}
+nav button.on{background:var(--ye);border-color:var(--ink)}
+nav svg{display:block;margin:auto;width:26px;height:26px}
+#m{position:fixed;inset:0;background:rgba(62,58,57,.45);display:flex;align-items:flex-end;z-index:30;visibility:hidden;opacity:0;transition:opacity .3s,visibility 0s .3s}
+#m.show{visibility:visible;opacity:1;transition:opacity .3s}
+#f{background:var(--bg);width:100%;max-width:560px;margin:auto;border:3px solid var(--ink);border-radius:28px 28px 0 0;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .34s cubic-bezier(.2,.9,.3,1);max-height:90vh;overflow:auto}
+#m.show #f{transform:none}
+#f label{display:block;font-size:13px;margin:10px 0 3px}#f .row{margin-top:16px;margin-bottom:0}
+.note{font-size:12px;text-align:center;opacity:.7}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}}
+</style></head><body>
+<main id="v"></main><nav id="nv"></nav><div id="m"><form id="f"></form></div>
+<script>
+var $=function(s){return document.querySelector(s)},U=function(){return Math.random().toString(36).slice(2,8)};
+var AB='https://maps.app.goo.gl/ohTajqYBKuUFcTqg6?g_st=ic',KY='https://maps.app.goo.gl/oFHDKoSD2Aw72kcT9?g_st=ic',YK='https://maps.app.goo.gl/PrgCnTgwPKv9DUtA8?g_st=ic';
+var TG={'':'','飛機':'a','巴士':'y','地鐵':'g','步行':'c'};
+var DI=0;function Q(a){DI++;return a.map(function(x,k){return{id:'d'+DI+'_'+k,t:x[0],tg:x[1],ti:x[2],m:x[3]||'',n:x[4]||''}})}
+var OS='大阪 Airbnb',KS='Rest collection Gion-Shijo（京都）';
+function DEF(){DI=0;return[
+{d:'10/29',w:'四',n:'抵達大阪・梅田＋道頓堀',st:OS,i:Q([
+['13:10','飛機','MM024 桃園 T1 → 關西 T2','','入境、領行李、辦網路'],
+['14:20','地鐵','接駁巴士到 T1 → 南海電鐵到難波','','約 40 分・¥970–1,500'],
+['15:30','','Airbnb 放行李',AB,'16:00 入住，可先請房東寄放'],
+['16:30','地鐵','Airbnb → 梅田','','約 ¥240–330'],
+['17:00','','晚餐 うなぎ串料理 いづも','https://maps.app.goo.gl/tocExDvxWTkgeHpE7?g_st=ic','已訂位・LUCUA'],
+['18:30','','はなだこ 章魚燒','はなだこ梅田','營業到 21:45'],
+['19:15','地鐵','梅田 → 難波（御堂筋線）','','約 10 分・¥240'],
+['19:30','','道頓堀散步','道頓堀','固力果跑跑人、食倒太郎'],
+['21:30','地鐵','回 Airbnb','']])},
+{d:'10/30',w:'五',n:'環球影城一日遊',st:OS,i:Q([
+['07:45','地鐵','Airbnb → 弁天町 → JR 環球影城站','','約 40 分・¥350–450'],
+['08:30','','環球影城入園','ユニバーサル・スタジオ・ジャパン','QR code 門票'],
+['12:00','','園內午餐','',''],
+['20:00','地鐵','回 Airbnb','']])},
+{d:'10/31',w:'六',n:'神戶半日＋大阪藝術花火',st:OS,i:Q([
+['07:45','地鐵','梅田 → 神戶三宮（阪急）','','約 30 分・¥330'],
+['08:30','','麵包店 RIKI／Vacance','Bakery RIKI Kobe','8:00 開'],
+['10:00','','The Bake、北野散步','The Bake Kobe','10:00 開'],
+['11:30','','午餐 神戸牛焼肉 WASSIA','https://maps.app.goo.gl/qPfezkDxPezLNqz56?g_st=ic','已訂位'],
+['13:00','','神戶港、美利堅公園','神戸ハーバーランド',''],
+['14:45','地鐵','神戶 → 天王寺 → りんくうタウン','','約 1 小時 20 分・約 ¥1,000'],
+['17:00','','抵達會場、買東西吃','りんくう公園マーブルビーチ','KKday 票券'],
+['18:00','','大阪藝術花火','りんくう公園マーブルビーチ','18:00–19:00'],
+['19:30','地鐵','回大阪','','人潮多，可稍等再走']])},
+{d:'11/1',w:'日',n:'梅田 → 京都',st:KS,i:Q([
+['10:00','','Airbnb 退房',AB,''],
+['10:15','地鐵','Airbnb → 梅田','','行李放車站置物櫃'],
+['10:30','','逛梅田、午餐','梅田駅',''],
+['13:00','地鐵','梅田 → 京都河原町（阪急）','','約 45 分・¥410'],
+['14:00','','飯店寄放行李',KY,'15:00 入住'],
+['16:00','','錦市場','錦市場','多數店 17:00–18:00 收'],
+['18:00','','先斗町晚餐、祇園花見小路','先斗町','']])},
+{d:'11/2',w:'一',n:'伏見稻荷＋清水八坂',st:KS,i:Q([
+['07:30','地鐵','祇園四條 → 伏見稻荷（京阪）','','10–15 分・¥210'],
+['08:00','','伏見稻荷 千本鳥居','伏見稲荷大社','登山約 2–3 小時'],
+['11:30','地鐵','伏見稻荷 → 清水五條（京阪）','','¥210，再步行約 20 分'],
+['12:30','','清水寺','清水寺',''],
+['14:30','','二年坂、三年坂','二年坂',''],
+['16:00','','八坂神社','八坂神社','']])},
+{d:'11/3',w:'二',n:'嵐山',st:KS,i:Q([
+['08:00','地鐵','河原町 → 桂 → 嵐山（阪急）','','約 25 分・¥230'],
+['08:30','','竹林小徑','嵐山竹林の小径',''],
+['10:00','','天龍寺、渡月橋','天龍寺',''],
+['12:00','','午餐 湯豆腐或蕎麥麵','',''],
+['14:00','','嵐電嵐山站 友禪光之林','嵐電嵐山駅',''],
+['17:00','地鐵','回京都','']])},
+{d:'11/4',w:'三',n:'梅田藍天大廈＋回台',st:'回家囉',i:Q([
+['08:15','地鐵','河原町 → 梅田（阪急）','','約 45 分・¥410，行李放置物櫃'],
+['09:30','','梅田藍天大廈空中庭園','梅田スカイビル空中庭園展望台','9:30 開'],
+['11:00','地鐵','梅田 → 難波 → 關西機場（南海）','','¥240＋¥970–1,500'],
+['13:15','','關西機場 T2 報到','関西国際空港 第2ターミナル','起飛前 2 小時'],
+['15:25','飛機','MM027 關西 T2 → 桃園 T1','','17:55 抵達']])}]}
+var BG=['護照','機票與訂單截圖','環球影城 QR code','花火 KKday 票券','Visit Japan Web QR code','eSIM 或 SIM 卡','日圓現金','信用卡','行動電源與充電線','轉接頭','薄外套（10–20°C）','雨具','常備藥品','舒適的鞋','旅平險／不便險'];
+var S=null,O=null;try{S=JSON.parse(localStorage.getItem('kx4'))}catch(e){}
+if(!S||!S.days){try{O=JSON.parse(localStorage.getItem('kx3')||localStorage.getItem('kx2'))}catch(e){}O=O||{};
+S={days:DEF(),wish:O.wish||[{id:'w1',ti:'大阪城',m:'大阪城',day:-1},{id:'w2',ti:'燒肉',m:YK,day:-1}],todo:O.todo||BG.map(function(b,i){return{id:'t'+i,t:b,k:0}}),exp:O.exp||[],day:0,tab:'home',rate:O.rate||0.2067}}
+function norm(){var df=DEF();S.days.forEach(function(d,i){if(!d.w&&df[i])d.w=df[i].w;if(d.st==null)d.st='';d.i.forEach(function(x){if(!(x.tg in TG))x.tg='地鐵'})});S.wish.forEach(function(w){if(w.day>=S.days.length)w.day=-1});S.exp.forEach(function(x){if(!x.c)x.c='J'});S.rate=+S.rate||0.2067;S.day=Math.min(S.day||0,S.days.length-1)}norm();
+var DB='https://kansai-trip-7c65b-default-rtdb.asia-southeast1.firebasedatabase.app';// ← Firebase Realtime Database 網址貼在這裡
+var busy=0,pend=0,tmr=0,RM=matchMedia('(prefers-reduced-motion:reduce)').matches,V=$('#v'),dirty=0,live=0;
+function share(){return JSON.parse(JSON.stringify({days:S.days,wish:S.wish,exp:S.exp}))}
+function canon(o){if(Array.isArray(o))return'['+o.map(canon).join(',')+']';if(o&&typeof o=='object')return'{'+Object.keys(o).sort().filter(function(k){return o[k]!=null&&!(Array.isArray(o[k])&&!o[k].length)}).map(function(k){return JSON.stringify(k)+':'+canon(o[k])}).join(',')+'}';return JSON.stringify(o)}
+function DBU(){return DB.replace(/\/+$/,'')+'/trip.json'}
+function push(){if(!DB)return;fetch(DBU(),{method:'PUT',body:JSON.stringify(share())}).then(function(r){if(!r.ok)throw 0;dirty=0;try{localStorage.removeItem('kx4d')}catch(e){}sst()}).catch(function(){dirty=1;try{localStorage.setItem('kx4d','1')}catch(e){}sst()})}
+function save(lo){try{localStorage.setItem('kx4',JSON.stringify(S))}catch(e){}if(!lo){dirty=1;try{localStorage.setItem('kx4d','1')}catch(e){}push()}}
+function apply(d){if(!d||!d.days){push();return}if(dirty){push();return}var c={days:d.days.map(function(x){x.i=x.i||[];return x}),wish:d.wish||[],exp:d.exp||[]};if(canon(c)===canon(share()))return;S.days=c.days;S.wish=c.wish;S.exp=c.exp;norm();save(1);if(busy||$('#m').classList.contains('show'))pend=1;else render()}
+function sst(){var e=document.getElementById('sy');if(e)e.innerHTML=syt()}
+function syt(){return!DB?'同步尚未設定':dirty?'有變更還沒同步，連上網路後會自動上傳':live?'● 已和旅伴同步':'連線中…'}
+try{dirty=localStorage.getItem('kx4d')=='1'?1:0}catch(e){}
+function refetch(){fetch(DBU()).then(function(r){return r.json()}).then(apply).catch(function(){})}
+function sync(){if(!DB||!window.EventSource)return;var es=new EventSource(DBU());es.addEventListener('put',function(e){live=1;var m=JSON.parse(e.data);if(m.path=='/')apply(m.data);else refetch();sst()});es.addEventListener('patch',refetch);es.onerror=function(){live=0;sst()};addEventListener('online',function(){if(dirty)push()})}
+sync();
+if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})});
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function mu(m){return!m?'':m.indexOf('http')==0?m:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(m)}
+function sv(p,w){return'<svg width="'+(w||20)+'" height="'+(w||20)+'" viewBox="0 0 24 24" fill="none" stroke="#3E3A39" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>'}
+var PINP='<path d="M12 22S5 14.5 5 9.5a7 7 0 0 1 14 0C19 14.5 12 22 12 22Z" fill="#F2A497"/><circle cx="12" cy="9.5" r="2.5" fill="#FFFCF6"/>',PIN=sv(PINP),PEN=sv('<path d="M4 20l1-4L16 5l3 3L8 19Z"/><path d="M14 7l3 3"/>'),TRS=sv('<path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13M10 11v6M14 11v6"/>');
+var TI={'飛機':sv('<path d="M3 12 21 5l-5 15-4-6Z"/><path d="M12 14l9-9"/>'),'巴士':sv('<rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/>'),'地鐵':sv('<rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 10h14M8 21l2-3M16 21l-2-3"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/>'),'步行':sv('<circle cx="13" cy="4" r="2"/><path d="M10 21l2-6 3 3v3M9 12l2-5 4 3 3 1M12 15l-1-4"/>')};
+var IC={home:'<path d="M3 12 12 4l9 8v8H3Z"/><path d="M10 20v-6h4v6"/>',tl:'<circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M12 6h9M12 18h9M6 9v6"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M9 9l3 4 3-4M9 13h6M12 13v4"/>',ck:'<rect x="4" y="4" width="16" height="16" rx="4"/><path d="m8 12 3 3 5-6"/>'};
+var TB=[['home','首頁'],['tl','行程'],['coin','記帳'],['ck','清單']];
+var K='stroke="#3E3A39" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"';
+function rab(s){return'<svg width="'+s+'" height="'+s+'" viewBox="0 0 28 28" '+K+'><ellipse cx="10" cy="8" rx="3" ry="7" fill="#FFFCF6"/><ellipse cx="18" cy="8" rx="3" ry="7" fill="#FFFCF6"/><path d="M10 6v5M18 6v5" stroke="#F2A497"/><circle cx="14" cy="18" r="8" fill="#FFFCF6"/><circle cx="11" cy="17" r="1" fill="#3E3A39"/><circle cx="17" cy="17" r="1" fill="#3E3A39"/><path d="M13 20.5h2"/></svg>'}
+function rabG(s){return'<svg width="'+s+'" height="'+s+'" viewBox="0 0 28 28" '+K+'><ellipse cx="10" cy="8" rx="3" ry="7" fill="#FFFCF6"/><ellipse cx="18" cy="8" rx="3" ry="7" fill="#FFFCF6"/><path d="M10 6v5M18 6v5" stroke="#F2A497"/><circle cx="14" cy="18" r="8" fill="#FFFCF6"/><path d="M14 9l-5-3v5ZM14 9l5-3v5Z" fill="#F2A497" stroke-width="1.6"/><circle cx="14" cy="9" r="1.4" fill="#F2A497" stroke-width="1.4"/><circle cx="11" cy="17" r="1" fill="#3E3A39"/><circle cx="17" cy="17" r="1" fill="#3E3A39"/><circle cx="9.3" cy="20" r="1.3" fill="#F2A497" stroke="none"/><circle cx="18.7" cy="20" r="1.3" fill="#F2A497" stroke="none"/><path d="M13 20.5h2"/></svg>'}
+function rabB(s){return'<svg width="'+s+'" height="'+s+'" viewBox="0 0 28 28" '+K+'><ellipse cx="10" cy="8" rx="3" ry="7" fill="#FFFCF6"/><ellipse cx="18" cy="8" rx="3" ry="7" fill="#FFFCF6"/><path d="M10 6v5M18 6v5" stroke="#A8D3E6"/><circle cx="14" cy="17" r="8" fill="#FFFCF6"/><circle cx="11" cy="16" r="1" fill="#3E3A39"/><circle cx="17" cy="16" r="1" fill="#3E3A39"/><path d="M13 19.5h2"/><path d="M14 25l-4-2.2v4.4ZM14 25l4-2.2v4.4Z" fill="#A8D3E6" stroke-width="1.6"/></svg>'}
+var DUO='<svg width="56" height="42" viewBox="0 0 56 42" '+K+'><path d="M21 29q7 5 14 0" fill="none"/><ellipse cx="12" cy="8" rx="2.6" ry="6.5" fill="#FFFCF6"/><ellipse cx="19.5" cy="8" rx="2.6" ry="6.5" fill="#FFFCF6"/><path d="M12 30q0-7 4-7t4 7Z" fill="#F2A497"/><circle cx="16" cy="18" r="7.5" fill="#FFFCF6"/><path d="M16 10l-4-2.6v5.2ZM16 10l4-2.6v5.2Z" fill="#F2A497" stroke-width="1.4"/><circle cx="13.3" cy="17.6" r=".9" fill="#3E3A39"/><circle cx="18.7" cy="17.6" r=".9" fill="#3E3A39"/><ellipse cx="36.5" cy="8" rx="2.6" ry="6.5" fill="#FFFCF6"/><ellipse cx="44" cy="8" rx="2.6" ry="6.5" fill="#FFFCF6"/><path d="M36 30q0-7 4-7t4 7Z" fill="#A8D3E6"/><circle cx="40" cy="18" r="7.5" fill="#FFFCF6"/><circle cx="37.3" cy="17.6" r=".9" fill="#3E3A39"/><circle cx="42.7" cy="17.6" r=".9" fill="#3E3A39"/><path d="M14 30v5M18 30v5M38 30v5M42 30v5"/><path d="M20 26q2 3 3 3M36 26q-2 3-3 3"/></svg>';
+var RAB=rab(32),HRT='<svg width="30" height="30" viewBox="0 0 28 28" '+K+'><path d="M14 25C5 18 3 11 8 8c3-1.5 5 .5 6 3 1-2.5 3-4.5 6-3 5 3 3 10-6 17Z" fill="#F5A25D"/></svg>',
+CAT='<svg width="32" height="32" viewBox="0 0 28 28" '+K+'><path d="M5 13 5 3l7 5ZM23 13l0-10-7 5Z" fill="#FFFCF6"/><circle cx="14" cy="16" r="9" fill="#FFFCF6"/><path d="M14 8v3M10.5 9.5l1 2M17.5 9.5l-1 2" stroke="#8a7a70"/><circle cx="10.5" cy="16" r="1" fill="#3E3A39"/><circle cx="17.5" cy="16" r="1" fill="#3E3A39"/><path d="M13 19l1 1 1-1"/></svg>';
+var HERO='<svg viewBox="0 0 360 200" role="img" aria-label="大阪城、鳥居、電車，以及一男一女和一隻虎斑貓的插畫"><g '+K.replace('2.2','3')+'><circle class="sun" cx="305" cy="40" r="20" fill="#F6D27A"/><g class="cl"><path d="M30 50h60a14 14 0 0 0-8-24 18 18 0 0 0-34-2 14 14 0 0 0-18 26Z" fill="#FFFCF6"/></g><g class="cl cl2"><path d="M190 36h46a11 11 0 0 0-6-19 14 14 0 0 0-26-2 11 11 0 0 0-14 21Z" fill="#FFFCF6"/></g><path d="M-5 128Q70 92 150 124T365 112V205H-5Z" fill="#B9DAA5"/><rect x="40" y="98" width="62" height="30" fill="#FFFCF6"/><rect x="50" y="76" width="42" height="22" fill="#FFFCF6"/><rect x="59" y="58" width="24" height="18" fill="#FFFCF6"/><path d="M32 98 71 86l39 12ZM44 76 71 65l27 11ZM55 58l16-12 16 12Z" fill="#B9DAA5"/><path d="M200 128V84M244 128V84M190 90h64M196 102h52" stroke-width="6"/><path d="M200 128V84M244 128V84M190 90h64M196 102h52" stroke-width="2" stroke="#F2A497"/><g class="trn"><rect x="262" y="110" width="84" height="24" rx="12" fill="#FFFCF6"/><path d="M262 124h84" stroke="#F2A497"/><rect x="274" y="115" width="14" height="8" rx="3" fill="#A8D3E6"/><rect x="294" y="115" width="14" height="8" rx="3" fill="#A8D3E6"/><circle cx="278" cy="136" r="4" fill="#F6D27A"/><circle cx="330" cy="136" r="4" fill="#F6D27A"/></g><path d="M-5 172Q90 158 180 170T365 166V205H-5Z" fill="#B9DAA5"/><g class="pp" id="hb"><circle cx="100" cy="139" r="9" fill="#FFFCF6"/><path d="M91 138a9 9 0 0 1 18 0c-4-3-12-3-18 0Z" fill="#3E3A39"/><rect x="88" y="149" width="24" height="20" rx="7" fill="#F6D27A"/><path d="M94 169v8M106 169v8"/><circle cx="97" cy="140" r=".8" fill="#3E3A39"/><circle cx="103" cy="140" r=".8" fill="#3E3A39"/></g><g class="pp pp2" id="hg"><path d="M129 140a11 11 0 0 1 22 0v9h-5v-5h-12v5h-5Z" fill="#3E3A39"/><circle cx="140" cy="141" r="8" fill="#FFFCF6"/><path d="M132 149h16l6 24h-28Z" fill="#F2A497"/><circle cx="137" cy="142" r=".8" fill="#3E3A39"/><circle cx="143" cy="142" r=".8" fill="#3E3A39"/><path d="M135 173v5M145 173v5"/></g><text id="eb" x="96" y="124" font-size="20" fill="#F2A497" stroke="#3E3A39" stroke-width="1.2" opacity="0">!</text><text id="eg" x="136" y="124" font-size="20" fill="#F2A497" stroke="#3E3A39" stroke-width="1.2" opacity="0">!</text><g class="cat" id="cat"><g class="cf" id="cf"><g class="cb"><path class="tail" d="M192 168c14-2 14-18 6-20" fill="none"/><ellipse cx="182" cy="168" rx="12" ry="9" fill="#FFFCF6"/><path d="M175 162l3 4M182 160v5M189 162l-3 4" stroke-width="2"/><path d="M173 155l-1-10 7 5ZM191 155l1-10-7 5Z" fill="#FFFCF6"/><circle cx="182" cy="154" r="9" fill="#FFFCF6"/><path d="M182 146v3M178 147l1 2M186 147l-1 2" stroke-width="2"/><circle cx="178" cy="154" r="1" fill="#3E3A39"/><circle cx="186" cy="154" r="1" fill="#3E3A39"/><path d="M181 158l1 1 1-1" stroke-width="1.6"/></g></g></g></g></svg>';
+function il(s){return'<svg viewBox="0 0 84 64" aria-hidden="true"><g stroke="#3E3A39" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">'+s+'</g></svg>'}
+var WV='<path d="M-3 48q11-7 22 0t22 0 22 0 22 0V67H-3Z" fill="#A8D3E6"/>',HL='<path d="M-3 50q30-14 52-4t38-2V67H-3Z" fill="#B9DAA5"/>';
+var ILL=[
+il(WV+'<circle class="fx" cx="68" cy="13" r="6" fill="#F6D27A"/><path d="M12 30h44l10-9h5l-4 13H18Z" fill="#F2A497"/><path d="M33 30l-8 10h7l12-10Z" fill="#FFFCF6"/>'),
+il(HL+'<circle cx="42" cy="27" r="15" fill="#A8D3E6"/><path d="M42 12v30M28 22h28M28 32h28" stroke-width="2"/><ellipse cx="42" cy="27" rx="24" ry="6" fill="none" stroke="#F2A497" stroke-width="3"/><path d="M33 51h18l-3-7H36Z" fill="#F6D27A"/>'),
+il(WV+'<g class="fx"><path d="M24 9v7M24 31v-7M13 20h7M28 20h7M16 12l5 5M32 12l-5 5M16 28l5-5M32 28l-5-5" stroke="#F2A497"/></g><path d="M60 7v5M60 23v-5M53 15h5M62 15h5" stroke="#F6D27A"/><path d="M31 46h24l-4 7H35Z" fill="#F2A497"/><path d="M44 45V29l10 16Z" fill="#FFFCF6"/>'),
+il(HL+'<rect x="10" y="18" width="64" height="24" rx="11" fill="#FFFCF6"/><path d="M10 34h64" stroke="#F2A497" stroke-width="3"/><rect x="19" y="22" width="11" height="7" rx="2" fill="#A8D3E6"/><rect x="37" y="22" width="11" height="7" rx="2" fill="#A8D3E6"/><rect x="55" y="22" width="11" height="7" rx="2" fill="#A8D3E6"/><circle cx="24" cy="45" r="3.5" fill="#F6D27A"/><circle cx="60" cy="45" r="3.5" fill="#F6D27A"/>'),
+il(HL+'<rect x="25" y="18" width="7" height="36" fill="#F2A497"/><rect x="52" y="18" width="7" height="36" fill="#F2A497"/><rect x="20" y="24" width="44" height="6" fill="#F2A497"/><path d="M14 11q28-6 56 0l-3 7H17Z" fill="#F2A497"/><circle class="fx" cx="72" cy="40" r="4" fill="#F6D27A"/>'),
+il('<path d="M-3 54h90V67H-3Z" fill="#B9DAA5"/><rect x="12" y="3" width="8" height="54" rx="3" fill="#B9DAA5"/><rect x="29" y="-3" width="8" height="60" rx="3" fill="#B9DAA5"/><rect x="47" y="5" width="8" height="52" rx="3" fill="#B9DAA5"/><rect x="64" y="0" width="8" height="57" rx="3" fill="#B9DAA5"/><path d="M12 21h8M12 38h8M29 15h8M29 34h8M47 23h8M47 40h8M64 18h8M64 36h8"/><path d="M20 12q8-6 14-2-6 7-14 2ZM55 28q8-6 14-2-6 7-14 2Z" fill="#FFFCF6"/>'),
+il(HL+'<rect x="22" y="12" width="14" height="40" fill="#FFFCF6"/><rect x="48" y="12" width="14" height="40" fill="#FFFCF6"/><path d="M36 30h12M36 42h12"/><rect x="18" y="6" width="48" height="8" rx="3" fill="#A8D3E6"/><circle class="fx" cx="42" cy="10" r="6" fill="#F6D27A"/><path d="M66 28l12-4-4 8Z" fill="#F2A497"/>')];
+var TINT={co:'#FBE3DE',ye:'#FCF1D4',aq:'#E2F1F7',gr:'#E6F2DF'},DT=['aq','ye','co','gr','co','gr','aq'];
+var T0=Date.UTC(2026,9,29,1,40),TE=Date.UTC(2026,10,4,9,0);
+function p2(n){return(n<10?'0':'')+n}
+function cdt(){var n=Date.now(),d=T0-n;if(d>0){var s=Math.floor(d/1000);return[Math.floor(s/86400)+' 天',p2(Math.floor(s%86400/3600))+' 時 '+p2(Math.floor(s%3600/60))+' 分 '+p2(s%60)+' 秒']}return n<TE?['旅行進行中','出發囉！']:['旅程結束','辛苦了']}
+function render(){clearInterval(tmr);$('#nv').innerHTML=TB.map(function(t){return'<button data-t="'+t[0]+'" class="'+(S.tab==t[0]?'on':'')+'">'+sv(IC[t[0]],26)+t[1]+'</button>'}).join('');({home:rHome,tl:rTl,coin:rExp,ck:rTodo})[S.tab]()}
+$('#nv').onclick=function(e){var b=e.target.closest('button');if(b){S.tab=b.dataset.t;save(1);render();scrollTo(0,0)}};
+
+var cid=0;
+function catLoop(){var my=++cid;if(RM)return;var cat=$('#cat'),cf=$('#cf');if(!cat)return;var cx=0,cy=0;
+var P={home:[0,0],right:[130,0],girl:[-6,0,-1,'hg','eg'],boy:[-110,0,1,'hb','eb'],castle:[-86,-82],torii:[40,-93],train:[118,-67]};
+var alive=function(){return my===cid&&cat.isConnected};
+var sl=function(t){return new Promise(function(r){setTimeout(r,t)})};
+var mv=async function(fr,d,ez){if(!alive())throw 0;var a=cat.animate(fr,{duration:d,easing:ez||'linear',fill:'forwards'});await a.finished;cat.style.transform=fr[fr.length-1].transform;a.cancel()};
+var T=function(x,y){return{transform:'translate('+x+'px,'+y+'px)'}};
+var face=function(tx){if(tx!==cx)cf.style.transform=tx>cx?'scaleX(-1)':'scaleX(1)'};
+var run=async function(tx){if(tx==cx)return;face(tx);cat.classList.add('run');await mv([T(cx,cy),T(tx,cy)],Math.abs(tx-cx)*11);cat.classList.remove('run');cx=tx};
+var jump=async function(tx,ty){face(tx);await mv([T(cx,cy),{transform:'translate('+((cx+tx)/2)+'px,'+(Math.min(cy,ty)-28)+'px)',offset:.5},T(tx,ty)],560,'ease-in-out');cx=tx;cy=ty};
+var go=async function(k){var t=P[k],dir=t[0]>cx?1:-1;if(cy!==0)await jump(cx+(t[0]>cx?24:-24),0);if(t[1]===0)await run(t[0]);else{await run(t[0]-24*dir);await jump(t[0],t[1])}};
+var bite=async function(k){var t=P[k],d=t[2];await go(k);face(cx+d);await sl(300);await mv([T(cx,cy),T(cx+d*14,cy-10),T(cx,cy)],380,'ease-out');var h=$('#'+t[3]),e=$('#'+t[4]);if(h)h.animate([{transform:'translateX(0)'},{transform:'translateX(-3px)'},{transform:'translateX(3px)'},{transform:'translateX(0)'}],{duration:180,iterations:3});if(e)e.animate([{opacity:0,transform:'translateY(4px)'},{opacity:1,transform:'translateY(-4px)',offset:.25},{opacity:1,offset:.8},{opacity:0}],{duration:1300})};
+var acts=['castle','girl','torii','boy','train','right','home'],last='home';
+(async function(){try{await sl(1200);while(alive()){var c=acts.filter(function(a){return a!==last}),k=c[Math.floor(Math.random()*c.length)];if(P[k][3])await bite(k);else await go(k);last=k;await sl(1500+Math.random()*2500)}}catch(e){}})()}
+function rHome(){var c=cdt();V.innerHTML='<h1>京阪神之旅 '+rabG(34)+rabB(34)+CAT+'</h1><div class="sm">10/29 – 11/4・Patty 和 Andy</div><div class="sm" id="sy">'+syt()+'</div><div class="hero">'+HERO+'</div><div class="bx cd" style="margin-top:14px"><div>出發倒數</div><b id="c1">'+c[0]+'</b><div class="r" id="c2">'+c[1]+'</div></div><h2>航班</h2><div class="bx"><div class="fl2"><div class="sm">去程・10/29（四）・MM024</div><b>09:40</b> 桃園 T1 → <b>13:10</b> 關西 T2</div><div class="fl2"><div class="sm">回程・11/4（三）・MM027</div><b>15:25</b> 關西 T2 → <b>17:55</b> 桃園 T1</div></div><h2>住宿</h2>'+[['大阪住宿','10/29 – 11/1・Airbnb','入住 16:00／退房 10:00',AB,'aq'],['京都住宿','11/1 – 11/4・Rest collection Gion-Shijo Kyoto','入住 15:00／退房 10:00',KY,'co']].map(function(h){return'<div class="bx row" style="background:var(--'+h[4]+');align-items:center"><div style="flex:1"><div class="sm">'+h[1]+'</div><div class="t" style="font-size:17px">'+h[0]+'</div><div class="n">'+h[2]+'</div></div><a class="ib big" target="_blank" rel="noopener" href="'+h[3]+'" aria-label="導航">'+PIN+'</a></div>'}).join('');
+tmr=setInterval(function(){var c=cdt();$('#c1').textContent=c[0];$('#c2').textContent=c[1]},1000);catLoop()}
+var CL=['co','ye','aq','gr'],last=-1;
+function srt(L){var ix=[],ts=[];L.forEach(function(x,i){if(x.t){ix.push(i);ts.push(x)}});ts.sort(function(a,b){return a.t<b.t?-1:a.t>b.t?1:0});ix.forEach(function(p,k){L[p]=ts[k]})}
+function row(x,k,b){var u=mu(x.m),tr=!!x.tg;return'<li class="it'+(tr?' tr':'')+(b?' an':'')+'" data-id="'+x.id+'"'+(b&&!RM?' style="animation-delay:'+(k*40)+'ms"':'')+'><div class="tt">'+esc(x.t)+'</div><div class="nd"><i></i></div><div class="cn"><div class="tx">'+(tr?'<div class="tq"><span class="tag '+TG[x.tg]+'">'+TI[x.tg]+x.tg+'</span>'+esc(x.ti)+'</div>':'<div class="pt">'+esc(x.ti)+'</div>')+(x.n?'<div class="n">'+esc(x.n)+'</div>':'')+'</div><div class="ic">'+(u?'<a class="ib" target="_blank" rel="noopener" href="'+esc(u)+'" aria-label="導航">'+PIN+'</a>':'')+'<button class="ib e" data-e="'+x.id+'" aria-label="編輯">'+PEN+'</button><button class="ib x" data-x="'+x.id+'" aria-label="刪除">'+TRS+'</button></div></div></li>'}
+function rTl(b){var D=S.days[S.day],N=S.days.length,fr=last<0?S.day:last,W=S.wish.filter(function(w){return w.day<0||w.day==S.day}),pc=function(i){return((i+.5)/N*100)+'%'};
+V.innerHTML='<div class="sh"><span class="si">'+RAB+'</span>每日行程</div><div class="ds"><div class="ln" style="left:'+pc(0)+';right:'+pc(0)+'"></div>'+S.days.map(function(d,i){return'<button class="dn'+(i==S.day?' on':'')+'" data-d="'+i+'"><span class="dot"></span><b>'+d.d+'</b><small>週'+esc(d.w||'')+'</small></button>'}).join('')+'<div class="mk" id="mk" style="left:'+pc(fr)+'">'+DUO+'</div></div>'
++'<div class="dc'+(b?' bn':'')+'" id="dc" style="background:'+TINT[DT[S.day%7]]+'"><div class="th">'+ILL[S.day%7]+'</div><div class="dx"><div class="sm">Day '+(S.day+1)+'</div><div class="dt2">'+esc(D.n)+'</div>'+(D.st?'<div class="n">住 '+esc(D.st)+'</div>':'')+'</div><span class="pe">'+sv('<path d="M4 20l1-4L16 5l3 3L8 19Z"/><path d="M14 7l3 3"/>',18)+'</span></div>'
++'<ul id="ul">'+D.i.map(function(x,k){return row(x,k,b)}).join('')+'</ul><button class="add" id="ad">＋ 新增行程</button>'
++'<div class="sh" style="margin-top:26px"><span class="si y">'+HRT+'</span>想去想吃</div><div class="bx"><div class="wg">'+W.map(function(w,k){return'<div class="wq" data-w2="'+w.id+'" style="background:var(--'+CL[k%4]+')"><span>'+esc(w.ti)+'</span>'+(w.day>=0?'<i>'+S.days[w.day].d+'</i>':'')+(w.m?'<a class="nv" target="_blank" rel="noopener" href="'+esc(mu(w.m))+'" aria-label="導航">'+sv(PINP,16)+'</a>':'')+'</div>'}).join('')+'<div class="wq add2" id="aw" role="button" aria-label="新增想去想吃">＋</div></div><div class="sm" style="margin-top:8px">長按方塊或行程可拖曳：拖到時間軸排進行程，拖到上方日期換到那一天。輕點方塊可編輯。</div></div>';
+var mk=$('#mk');void mk.offsetWidth;mk.style.left=pc(S.day);last=S.day}
+V.addEventListener('animationend',function(e){e.target.classList.remove('an','bn')});
+function F(title,fs,sa,dl){var f=$('#f'),h='<b>'+title+'</b>';fs.forEach(function(x){h+='<label>'+x.l+'</label>'+(x.o?'<select id="f_'+x.k+'">'+x.o.map(function(o){return'<option value="'+o[0]+'"'+(String(o[0])==String(x.v)?' selected':'')+'>'+esc(o[1])+'</option>'}).join('')+'</select>':'<input id="f_'+x.k+'" type="'+(x.t||'text')+'" value="'+esc(x.v)+'">')});
+f.innerHTML=h+'<div class="row"><button class="bt" type="submit">儲存</button><button class="bt w" type="button" id="fc">取消</button>'+(dl?'<button class="bt d" type="button" id="fx">刪除</button>':'')+'</div>';busy=1;$('#m').classList.add('show');$('#fc').onclick=function(){cls(0)};if(dl)$('#fx').onclick=function(){dl();cls(1)};
+f.onsubmit=function(e){e.preventDefault();var o={};fs.forEach(function(x){o[x.k]=$('#f_'+x.k).value.trim()});sa(o);cls(1)}}
+function cls(ch){$('#m').classList.remove('show');busy=0;if(ch){save();render()}else if(pend){pend=0;render()}}
+$('#m').onclick=function(e){if(e.target.id=='m')cls(0)};
+function dayO(){return S.days.map(function(d,i){return[i,d.d+' '+d.n]})}
+function eDay(){var D=S.days[S.day];F('編輯 Day '+(S.day+1),[{k:'n',l:'標題',v:D.n},{k:'st',l:'住宿',v:D.st}],function(o){D.n=o.n||D.n;D.st=o.st})}
+function eItem(id){var it=null,di=S.day;S.days.forEach(function(d,i){d.i.forEach(function(x){if(x.id==id){it=x;di=i}})});var nw=!it;it=it||{t:'',ti:'',m:'',tg:'',n:''};
+F(nw?'新增行程':'編輯行程',[{k:'ti',l:'行程標題',v:it.ti},{k:'m',l:'Google Maps 網址（或地名）',v:it.m},{k:'t',l:'時間',v:it.t,t:'time'},{k:'tg',l:'交通方式（選「無」就是景點或餐廳）',v:it.tg,o:[['','無'],['飛機','飛機'],['巴士','巴士'],['地鐵','地鐵'],['步行','步行']]},{k:'n',l:'備註',v:it.n},{k:'d',l:'日期',v:di,o:dayO()}],function(o){var d=+o.d;o.ti=o.ti||'未命名';if(nw)o.id=U();else{S.days[di].i=S.days[di].i.filter(function(x){return x.id!=id});o.id=id}delete o.d;S.days[d].i.push(o);srt(S.days[d].i)},nw?null:function(){S.days[di].i=S.days[di].i.filter(function(x){return x.id!=id})})}
+function eWish(id){var w=S.wish.filter(function(x){return x.id==id})[0],nw=!w;w=w||{ti:'',m:'',day:-1};
+F(nw?'新增想去想吃':'編輯想去想吃',[{k:'ti',l:'標題',v:w.ti},{k:'m',l:'Google Maps 網址（或地名）',v:w.m},{k:'day',l:'分到哪一天',v:w.day,o:[[-1,'未定']].concat(dayO())}],function(o){o.day=+o.day;o.ti=o.ti||'未命名';if(nw){o.id=U();S.wish.push(o)}else{w.ti=o.ti;w.m=o.m;w.day=o.day}},nw?null:function(){S.wish=S.wish.filter(function(x){return x.id!=id})})}
+var dgn=false,xt=null;
+function flip(ul,ex,fn){var els=[].filter.call(ul.children,function(c){return c!==ex&&c.classList.contains('it')}),o=els.map(function(c){return c.getBoundingClientRect().top});els.forEach(function(c){c.style.transition='none';c.style.transform=''});fn();if(RM)return;var n=els.map(function(c){return c.getBoundingClientRect().top});els.forEach(function(c,i){c.style.transform='translateY('+(o[i]-n[i])+'px)'});void ul.offsetHeight;els.forEach(function(c){c.style.transition='transform .24s cubic-bezier(.2,.8,.3,1)';c.style.transform=''})}
+function lift(el,x,y){var r=el.getBoundingClientRect(),c=el.cloneNode(true);c.classList.remove('an','ghost');c.removeAttribute('style');c.classList.add('fl');c.style.width=r.width+'px';c.style.height=r.height+'px';c.style.left=r.left+'px';c.style.top=r.top+'px';document.body.appendChild(c);return{c:c,ox:x-r.left,oy:y-r.top}}
+function tmv(ev){ev.preventDefault()}
+function drag(e,el,kind){var sx=e.clientX,sy=e.clientY,lx=sx,ly=sy,on=false,L,raf,ul=$('#ul'),ov=null,ph=null;if(kind=='wq'){ph=document.createElement('li');ph.className='ph'}
+var pos=function(){L.c.style.left=(lx-L.ox)+'px';L.c.style.top=(ly-L.oy)+'px';var x=document.elementFromPoint(lx,ly),d=x&&x.closest('.dn');if(d&&kind=='it'&&+d.dataset.d==S.day)d=null;if(ov&&ov!==d)ov.classList.remove('ov');ov=d;if(d)d.classList.add('ov');var mv=kind=='it'?el:ph,ur=ul.getBoundingClientRect();
+if(!d&&ly>ur.top-40&&ly<ur.bottom+40){var sb=[].filter.call(ul.children,function(c){return c!==mv}),bf=null;for(var k=0;k<sb.length;k++){var r=sb[k].getBoundingClientRect();if(ly<r.top+r.height/2){bf=sb[k];break}}if(mv.parentNode!==ul||mv.nextElementSibling!==bf)flip(ul,mv,function(){ul.insertBefore(mv,bf)})}else if(ph&&ph.parentNode)flip(ul,ph,function(){ph.remove()})};
+var loop=function(){if(ly<90)scrollBy(0,-8);else if(ly>innerHeight-140)scrollBy(0,8);pos();raf=requestAnimationFrame(loop)};
+var tm=setTimeout(function(){on=true;dgn=true;busy=1;L=lift(el,sx,sy);el.classList.add('ghost');if(navigator.vibrate)try{navigator.vibrate(15)}catch(x){}document.addEventListener('touchmove',tmv,{passive:false});loop()},380);
+var mo=function(ev){lx=ev.clientX;ly=ev.clientY;if(!on&&Math.abs(lx-sx)+Math.abs(ly-sy)>8)end(1)};
+var end=function(c){clearTimeout(tm);removeEventListener('pointermove',mo);removeEventListener('pointerup',up);removeEventListener('pointercancel',cn);document.removeEventListener('touchmove',tmv);if(!on)return;cancelAnimationFrame(raf);L.c.remove();if(ov)ov.classList.remove('ov');var D=S.days[S.day];
+if(kind=='it'){var it=D.i.filter(function(x){return x.id==el.dataset.id})[0];if(!c&&it&&ov){D.i=D.i.filter(function(x){return x!==it});var T=S.days[+ov.dataset.d];T.i.push(it);srt(T.i)}else if(!c){var ids=[].map.call(ul.children,function(q){return q.dataset.id});D.i.sort(function(a,b){return ids.indexOf(a.id)-ids.indexOf(b.id)})}}
+else{var w=S.wish.filter(function(x){return x.id==el.dataset.w2})[0];if(!c&&w){if(ph.parentNode===ul){var ix=[].indexOf.call(ul.children,ph);D.i.splice(ix,0,{id:U(),t:'',ti:w.ti,tg:'',m:w.m,n:''});S.wish=S.wish.filter(function(x){return x!==w})}else if(ov)w.day=+ov.dataset.d}if(ph)ph.remove()}
+setTimeout(function(){dgn=false},60);busy=0;pend=0;if(!c)save();render()};
+var up=function(){end(0)},cn=function(){end(1)};
+addEventListener('pointermove',mo);addEventListener('pointerup',up);addEventListener('pointercancel',cn)}
+V.addEventListener('pointerdown',function(e){if(S.tab!='tl'||e.button>0||e.target.closest('a,button'))return;var q=e.target.closest('.wq[data-w2]');if(q)return drag(e,q,'wq');var it=e.target.closest('.it');if(it)drag(e,it,'it')});
+V.addEventListener('contextmenu',function(e){if(e.target.closest('.wq,.it'))e.preventDefault()});
+V.addEventListener('click',function(e){var t=e.target,b;
+if(S.tab=='tl'){if(dgn)return;if(b=t.closest('.dn')){S.day=+b.dataset.d;save(1);rTl(1);return}if(t.closest('#dc')){eDay();return}if(t.closest('#ad')){eItem(null);return}if(t.closest('#aw')){eWish(null);return}if(b=t.closest('[data-e]')){eItem(b.dataset.e);return}
+if(b=t.closest('[data-x]')){if(xt==b){S.days[S.day].i=S.days[S.day].i.filter(function(x){return x.id!=b.dataset.x});xt=null;save();rTl()}else{xt=b;var o=b.innerHTML;b.textContent='確定';setTimeout(function(){if(xt==b){xt=null;b.innerHTML=o}},2500)}return}
+var q=t.closest('.wq[data-w2]');if(q&&!t.closest('.nv'))eWish(q.dataset.w2)}
+else if(S.tab=='ck'){if(b=t.closest('[data-td]')){S.todo=S.todo.filter(function(x){return x.id!=b.dataset.td});save(1);rTodo()}}
+else if(S.tab=='coin'){if(b=t.closest('[data-xe]')){S.exp.splice(+b.dataset.xe,1);save();rExp()}}});
+V.addEventListener('change',function(e){var c=e.target.dataset&&e.target.dataset.c;if(c){S.todo.forEach(function(x){if(x.id==c)x.k=e.target.checked?1:0});save(1);rTodo()}});
+function rTodo(){V.innerHTML='<div class="sh"><span class="si y">'+sv(IC.ck,26)+'</span>行前清單</div><div class="sm" style="margin-bottom:8px">清單只存在這支手機，不會同步。</div><div class="bx"><div class="row"><input id="ti" placeholder="新增待辦"><button class="bt" id="ta">新增</button></div>'+S.todo.map(function(x){return'<div class="ck '+(x.k?'dn2':'')+'"><input type="checkbox" data-c="'+x.id+'" '+(x.k?'checked':'')+'><span>'+esc(x.t)+'</span><button class="ib x" data-td="'+x.id+'" aria-label="刪除">'+TRS+'</button></div>'}).join('')+'</div>';
+$('#ta').onclick=function(){var v=$('#ti').value.trim();if(v){S.todo.unshift({id:U(),t:v,k:0});save(1);rTodo()}}}
+var P=['Patty','Andy'];
+function nf(n){return Math.round(n).toLocaleString()}
+
+function hm(t){var d=new Date(t);return(d.getMonth()+1)+'/'+d.getDate()+' '+p2(d.getHours())+':'+p2(d.getMinutes())}
+async function fx(force){if(!force&&S.rs==1&&S.rt&&Date.now()-S.rt<3600e3)return;if(!force&&S.rs==2)return;
+var src=[['https://open.er-api.com/v6/latest/JPY',function(d){return d.rates&&d.rates.TWD}],['https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/jpy.json',function(d){return d.jpy&&d.jpy.twd}]];
+for(var i=0;i<src.length;i++){try{var c=new AbortController(),to=setTimeout(function(){c.abort()},6000),r=await fetch(src[i][0],{signal:c.signal});clearTimeout(to);var v=+src[i][1](await r.json());if(v>0){S.rate=+v.toFixed(5);S.rt=Date.now();S.rs=1;save(1);if(S.tab=='coin'&&!busy)rExp();return}}catch(e){}}
+if(force){S.fe=1;if(S.tab=='coin')rExp();S.fe=0}}
+var stt=0;
+function rExp(){var r=S.rate,J=function(x){return x.c=='T'?x.a/r:x.a},tot=0,all=0,pd=[0,0],ow=[0,0],my=[0,0],open=0;
+S.exp.forEach(function(x){var j=J(x),sh=x.s==0?[j/2,j/2]:x.s==1?[j,0]:[0,j];all+=j;my[0]+=sh[0];my[1]+=sh[1];if(x.z)return;open++;tot+=j;pd[x.p]+=j;ow[0]+=sh[0];ow[1]+=sh[1]});
+var df=pd[0]-ow[0],ab=Math.abs(df);
+var res=!S.exp.length?'還沒有記帳':!open?'目前沒有未結算的帳':ab<1?'不用找錢，剛好打平':(df>0?'Andy 要給 Patty':'Patty 要給 Andy')+'<br>¥'+nf(ab)+'　NT$'+nf(ab*r);
+var fs=-1;S.exp.forEach(function(x,i){if(x.z&&fs<0)fs=i});
+V.innerHTML='<div class="sh"><span class="si">'+sv(IC.coin,26)+'</span>分帳</div><div class="bx sum">'+res+(open?'<div class="sm">未結算 '+open+' 筆・¥'+nf(tot)+'（NT$'+nf(tot*r)+'）<br>Patty 付 ¥'+nf(pd[0])+'・Andy 付 ¥'+nf(pd[1])+'</div><button class="bt w" id="st" style="margin-top:10px">'+(stt?'確定已結算？再按一次':'已結算')+'</button>':'')+'</div>'
++'<div class="bx"><div class="row" style="margin:0"><div style="flex:1"><div class="sm">'+(S.rs==1?'即時匯率・更新於 '+hm(S.rt):S.rs==2?'手動設定的匯率':'參考匯率（尚未取得即時匯率）')+'</div><div style="font-size:18px">1 日圓 ≈ NT$'+r+'</div></div><button class="bt" id="rf">更新</button></div>'+(S.fe?'<div class="note" style="margin-top:6px">現在連不到匯率網站，先用上面的匯率計算。</div>':'')+'<details style="margin-top:8px"><summary class="sm">手動修改匯率</summary><input id="er" type="number" step="0.0001" inputmode="decimal" value="'+r+'" style="margin-top:6px"></details><div class="note" style="margin-top:6px">開啟記帳頁時自動抓市場匯率（每小時更新），各自手機分別計算。</div></div>'
++'<div class="bx"><div class="row"><input id="ed" placeholder="項目"></div><div class="row"><input id="ea" type="number" inputmode="decimal" placeholder="金額"><select id="ec" style="width:110px;flex:none"><option value="J">日圓</option><option value="T">台幣</option></select></div><div class="row"><select id="ep"><option value="0">Patty 付</option><option value="1">Andy 付</option></select><select id="es"><option value="0">兩人平分</option><option value="1">只算 Patty</option><option value="2">只算 Andy</option></select></div><button class="add" id="eb">記一筆</button></div>'
++S.exp.map(function(x,i){var j=J(x);return(i==fs?'<div class="sm" style="display:flex;align-items:center;gap:8px;margin:18px 4px 10px"><span style="flex:1;border-top:3px dashed var(--ink)"></span>以下已結算，不再計入<span style="flex:1;border-top:3px dashed var(--ink)"></span></div>':'')+'<div class="bx row" style="margin-bottom:10px'+(x.z?';opacity:.55':'')+'"><div style="flex:1"><div style="font-size:17px">'+esc(x.d)+(x.z?' <span class="tag w" style="background:var(--gr)">已結算</span>':'')+'</div><div class="n">'+P[x.p]+' 付・'+['平分','只算 Patty','只算 Andy'][x.s]+'</div></div><div style="text-align:right"><b>'+(x.c=='T'?'NT$'+nf(x.a):'¥'+nf(x.a))+'</b><div class="n">'+(x.c=='T'?'≈¥'+nf(j):'≈NT$'+nf(x.a*r))+'</div></div><button class="ib x" data-xe="'+i+'" aria-label="刪除">'+TRS+'</button></div>'}).join('')
++(S.exp.length?'<div class="bx" style="background:var(--ye);margin-top:18px"><div class="row" style="margin:0"><div style="flex:1;font-size:18px">旅程總花費</div><div style="text-align:right"><b style="font-size:22px">¥'+nf(all)+'</b><div class="n">≈NT$'+nf(all*r)+'</div></div></div><div style="border-top:3px dashed var(--ink);margin:10px 0 8px"></div><div class="row" style="margin:0"><div style="flex:1">Patty 花了</div><div>¥'+nf(my[0])+'<span class="n">（NT$'+nf(my[0]*r)+'）</span></div></div><div class="row" style="margin:4px 0 0"><div style="flex:1">Andy 花了</div><div>¥'+nf(my[1])+'<span class="n">（NT$'+nf(my[1]*r)+'）</span></div></div><div class="note" style="margin-top:8px">含已結算的帳。「花了」是各自實際分攤的金額。</div></div>':'');
+$('#er').onchange=function(){var v=parseFloat(this.value);if(v>0){S.rate=v;S.rs=2;S.rt=Date.now();save(1);rExp()}};$('#rf').onclick=function(){this.textContent='更新中';fx(1)};fx();
+var sb=$('#st');if(sb)sb.onclick=function(){if(!stt){stt=1;rExp();setTimeout(function(){if(stt){stt=0;if(S.tab=='coin'&&!busy)rExp()}},3000);return}stt=0;var t=Date.now();S.exp.forEach(function(x){if(!x.z)x.z=t});save();rExp()};
+$('#eb').onclick=function(){var a=+$('#ea').value;if(!(a>0))return;S.exp.unshift({d:$('#ed').value||'支出',a:a,c:$('#ec').value,p:+$('#ep').value,s:+$('#es').value});save();rExp()}}
+render();
+</script></body></html>
